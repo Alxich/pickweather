@@ -35,6 +35,8 @@ $h6_margin: 0.8rem 0 !default;
 $reg_radius: 5px;
 $content_pad: 0 20px;
 $content_pad_around: 20px;
+$content_item_pad: 12px;
+$content_item_mrg: 12px;
 $content_top_pad: 16px;
 $content_btm_pad: 16px;
 $transition_normal: 0.25s ease-in-out;
@@ -43,7 +45,14 @@ $triangle_down: rotate(45deg) scale(-1, -1);
 $triangle: 3px 0px 0px 0px;
 $user_icon_small: 36px;
 
+@mixin content_border {
+  border: 3px solid $color_on_white;
+  border-radius: $reg_radius;
+}
+
 // Set default colors
+
+// Palete https://colorhunt.co/palette/1a120b3c2a21d5cea3e5e5cb
 
 $background: #f9f9f9 !default;
 $overhigh_bg: #1a120b !default;
@@ -112,3 +121,8 @@ $input_pad: 13px 20px;
 $input_gap: 16px;
 $textarea_pad: 20px 20px;
 $area_height: 91px;
+
+// Weather values
+
+$weather_icon_big: 130px;
+$weather_icon_small: 80px;

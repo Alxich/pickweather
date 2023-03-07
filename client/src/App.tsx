@@ -74,6 +74,7 @@ function App() {
               <a href="https://github.com/cyberboysumanjay/Inshorts-News-API">
                 Inshorts News API
               </a>
+              <a href="https://github.com/lutangar/cities.json">cities.json</a>
             </div>
           </div>
         </div>

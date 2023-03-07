@@ -7,18 +7,17 @@
     flex-direction: row;
     align-items: stretch;
     width: 100%;
-    padding-bottom: 25px;
+    padding-bottom: $content_pad_around;
 
     .picture {
       display: flex;
       justify-content: center;
       align-items: center;
-      border: 3px solid $color_on_white;
-      border-radius: $reg_radius;
-      min-height: 130px;
-      min-width: 130px;
-      height: 130px;
-      width: 130px;
+      @include content_border;
+      min-height: $weather_icon_big;
+      min-width: $weather_icon_big;
+      height: $weather_icon_big;
+      width: $weather_icon_big;
     }
 
     .container {
@@ -59,13 +58,12 @@
       justify-content: flex-start;
       flex-direction: row;
       align-items: center;
-      border: 3px solid $color_on_white;
-      border-radius: $reg_radius;
+      @include content_border;
       width: calc(50% - 6px);
-      padding: 12px;
+      padding: $content_item_pad;
 
       &:not(:last-child) {
-        margin-bottom: 12px;
+        margin-bottom: $content_item_mrg;
       }
 
       .fafont-icon {
@@ -76,7 +74,7 @@
 
       .container {
         align-items: flex-start;
-        padding-left: 15px;
+        padding-left: $content_item_mrg;
 
         h4 {
           margin: 0 0 5px 0;

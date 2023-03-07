@@ -6,25 +6,23 @@
     justify-content: flex-start;
     flex-direction: row;
     align-items: center;
-    border: 3px solid $color_on_white;
-    border-radius: $reg_radius;
+    @include content_border;
     width: 100%;
-    padding: 12px;
+    padding: $content_item_pad;
 
     &:not(:last-child) {
-      margin-bottom: 12px;
+      margin-bottom: $content_item_mrg;
     }
 
     .picture {
       display: flex;
       justify-content: center;
       align-items: center;
-      border: 3px solid $color_on_white;
-      border-radius: $reg_radius;
-      min-height: 80px;
-      min-width: 80px;
-      height: 80px;
-      width: 80px;
+      @include content_border;
+      min-height: $weather_icon_small;
+      min-width: $weather_icon_small;
+      height: $weather_icon_small;
+      width: $weather_icon_small;
 
       #icon-weather {
         transform: scale(0.6);
@@ -33,7 +31,7 @@
     }
 
     .container {
-      padding-left: 12px;
+      padding-left: $content_item_pad;
 
       .date {
         display: flex;

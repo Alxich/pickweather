@@ -3,8 +3,7 @@
   justify-content: flex-start;
   flex-direction: column;
   align-items: flex-start;
-  border: 3px solid $color_on_white;
-  border-radius: $reg_radius;
+  @include content_border;
   padding: $content_pad_around;
 }
 

@@ -1,15 +1,15 @@
 #categories {
-  margin-right: 20px;
+  margin-right: $content_pad_around;
   min-width: 220px;
 
   .title {
     h3 {
-        margin: 0 0 15px 0;
+        margin: 0 0 $content_item_mrg 0;
     }
   }
 
   ul {
-    padding-left: 20px;
+    padding-left: $content_pad_around;
     margin: 0;
 
     li {
