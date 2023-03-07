@@ -1,0 +1,45 @@
+#colophone {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  .top {
+    background-color: $footer_bg_top;
+    padding: $footer_cnt_pad;
+    color: $color_on_black;
+
+    a {
+        position: relative;
+        color: $color_on_black;
+
+        &::after {
+            position: absolute;
+            background-color: $color_on_black;
+            content: "";
+            bottom: 0;
+            left: 0;
+            height: 1px;
+            width: 100%;
+        }
+    }
+
+    .about {
+        max-width: $footer_cnt_inner_width;
+    }
+
+    .info {
+        align-items: flex-start;
+        max-width: $footer_cnt_inner_width;
+        margin-right: 0;
+
+        a {
+            margin-bottom: 5px;
+        }
+    }
+  }
+
+  .btm {
+    background-color: $footer_bg_btm;
+  }
+}

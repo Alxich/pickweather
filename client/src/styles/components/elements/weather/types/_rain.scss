@@ -1,0 +1,59 @@
+/*here is the icon class */
+
+&.sun-shower .rain {
+  transform: translate(0.3em, 3.8em);
+}
+
+.rain:after {
+  content: "";
+  position: absolute;
+  display: block;
+  z-index: 2;
+  color: $weather_accent;
+  background: $weather_accent;
+  width: 0.3em;
+  height: 1em;
+  border-radius: 0.15em;
+  transform: translate(0.4em, 0.2em) rotate(20deg);
+  animation: rain 2s infinite ease-in-out;
+  box-shadow: 0.6em 0.6em, 1.2em -0.2em, 1.2em 1.2em, 1.8em 0.2em;
+}
+
+.bolt {
+  z-index: 1;
+  position: absolute;
+  background: $weather_accent;
+  width: 2.5em;
+  height: 2em;
+  transform: translate(-0.1em, 0.2em) rotate(-45deg) scale(-0.8) skewX(-30deg);
+  color: $weather_accent;
+  animation: lightning 5s infinite linear;
+}
+
+.bolt:before {
+  content: "";
+  z-index: 2;
+  display: block;
+  position: absolute;
+  background: $background;
+  width: 1.3em;
+  height: 1.3em;
+  color: $weather_accent;
+  transform: translate(1.85em, 0.3em) rotate(45deg);
+}
+
+.bolt:after {
+  content: "";
+  position: absolute;
+  display: block;
+  z-index: 2;
+  background: $background;
+  width: 1.3em;
+  height: 1.3em;
+  transform: translate(-0.65em, 0.3em) rotate(45deg);
+}
+
+.bolt:nth-child(2) {
+  transform: translate(0.75em, 1.2em) scale(-0.3) rotate(-45deg) skewX(-30deg);
+  animation: lightning 2s infinite linear;
+}

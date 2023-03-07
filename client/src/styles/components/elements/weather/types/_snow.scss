@@ -1,0 +1,43 @@
+.flake {
+  position: absolute;
+  display: block;
+
+  &:nth-child(1) {
+    transform: scale(2) translate(0.1em, -0.2em);
+
+    &:after {
+      z-index: 2;
+      color: $weather_accent;
+      position: absolute;
+      animation: spin 7s infinite reverse linear;
+      display: block;
+      content: "\2744";
+    }
+  }
+
+  &:nth-child(2) {
+    transform: scale(1.2) translate(0.6em, 1.3em);
+
+    &:after {
+      z-index: 2;
+      color: $weather_accent;
+      position: absolute;
+      display: block;
+      content: "\2744";
+      animation: spin 3s infinite linear;
+    }
+  }
+
+  &:nth-child(3) {
+    transform: scale(1.4) translate(1.2em, 0.6em);
+
+    &:after {
+      z-index: 2;
+      color: $weather_accent;
+      position: absolute;
+      animation: spin 5s infinite linear;
+      display: block;
+      content: "\2744";
+    }
+  }
+}

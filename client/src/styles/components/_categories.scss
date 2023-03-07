@@ -1,0 +1,23 @@
+#categories {
+  margin-right: 20px;
+  min-width: 220px;
+
+  .title {
+    h3 {
+        margin: 0 0 15px 0;
+    }
+  }
+
+  ul {
+    padding-left: 20px;
+    margin: 0;
+
+    li {
+      cursor: pointer;
+
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}

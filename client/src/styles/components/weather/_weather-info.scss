@@ -1,0 +1,91 @@
+#weather-info {
+  width: calc(63% - 10px);
+
+  .main {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: stretch;
+    width: 100%;
+    padding-bottom: 25px;
+
+    .picture {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 3px solid $color_on_white;
+      border-radius: $reg_radius;
+      min-height: 130px;
+      min-width: 130px;
+      height: 130px;
+      width: 130px;
+    }
+
+    .container {
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 100%;
+      padding: 12px 0 0 35px;
+
+      & > div:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+
+      .town {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: baseline;
+        width: 100%;
+      }
+    }
+  }
+
+  .additional {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+
+    .item {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: row;
+      align-items: center;
+      border: 3px solid $color_on_white;
+      border-radius: $reg_radius;
+      width: calc(50% - 6px);
+      padding: 12px;
+
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+
+      .fafont-icon {
+        border: 3px solid $color_on_white;
+        border-radius: $reg_radius;
+        padding: 5px;
+      }
+
+      .container {
+        align-items: flex-start;
+        padding-left: 15px;
+
+        h4 {
+          margin: 0 0 5px 0;
+        }
+
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

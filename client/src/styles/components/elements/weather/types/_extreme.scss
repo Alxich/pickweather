@@ -1,0 +1,66 @@
+.extreme {
+  background: $background;
+  margin: auto auto;
+  transform: rotate(-10deg);
+
+  .harsh-wind {
+    margin: 0.2em auto;
+
+    &:nth-child(1) {
+      background: $weather_accent;
+      border-radius: 0.15em;
+      width: 4em;
+      height: 0.3em;
+      animation: harsh-wind 1s infinite linear;
+    }
+
+    &:nth-child(2) {
+      background: $weather_accent;
+      border-radius: 0.15em;
+      width: 3em;
+      height: 0.3em;
+      animation: harsh-wind 1s infinite linear 0.2s forwards;
+    }
+
+    &:nth-child(3) {
+      background: $weather_accent;
+      border-radius: 0.15em;
+      width: 2em;
+      height: 0.3em;
+      transform: translate(1em, 0em);
+      animation: harsh-wind 1s infinite linear 0.4s forwards;
+    }
+
+    &:nth-child(4) {
+      background: $weather_accent;
+      border-radius: 0.15em;
+      width: 1.5em;
+      height: 0.3em;
+      animation: harsh-wind 1s infinite linear 0.6s forwards;
+    }
+
+    &:nth-child(5) {
+      background: $weather_accent;
+      border-radius: 0.15em;
+      width: 1em;
+      height: 0.3em;
+      animation: harsh-wind 1s infinite linear 0.8s forwards;
+    }
+
+    &:nth-child(6) {
+      background: $weather_accent;
+      border-radius: 0.15em;
+      width: 0.75em;
+      height: 0.3em;
+      animation: harsh-wind 1s infinite linear 1s forwards;
+    }
+
+    &:nth-child(7) {
+      background: $weather_accent;
+      border-radius: 0.15em;
+      width: 0.5em;
+      height: 0.3em;
+      animation: harsh-wind 1s infinite linear 1.2s forwards;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+#icon-weather {
+  position: relative;
+  display: inline-block;
+  background-color: $background;
+  margin: 5%;
+  width: 4em;
+  height: 4em;
+  font-size: 1.35em;
+  left: -5px;
+  top: -5px;
+
+  .thunder,
+  .snow,
+  .haze,
+  .drizzle,
+  .rain {
+    transform: translate(1.3em, 2.2em);
+    width: 2.8em;
+    height: 2.5em;
+    background: $background;
+    position: absolute;
+  }
+
+  @import "./types/index.scss";
+}

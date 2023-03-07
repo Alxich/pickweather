@@ -7,12 +7,21 @@
   width: 100%;
   margin: 0 auto;
 
+  &.border {
+    border: 3px solid $color_on_white;
+    border-radius: $reg_radius;
+  }
+
   &.relative {
     position: relative;
   }
 
   &.content-pad {
     padding: $content-pad;
+  }
+
+  &.margin-top {
+    margin-top: $content_top_pad;
   }
 
   &.full-height {
@@ -33,7 +42,7 @@
   }
 
   &.content-use {
-    padding: 10px 20px;
+    padding: $content_pad_around;
   }
 
   &.to-left {
@@ -50,6 +59,14 @@
 
   &.flex-right {
     justify-content: flex-end;
+  }
+
+  &.flex-start {
+    align-items: flex-start;
+  }
+
+  &.flex-end {
+    align-items: flex-end;
   }
 
   &.flex-space {

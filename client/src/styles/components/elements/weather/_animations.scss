@@ -1,0 +1,155 @@
+@keyframes harsh-wind {
+  0% {
+    transform: translate(-0.15em, 0em);
+  }
+  50% {
+    transform: translate(0.15em, 0em);
+  }
+  100% {
+    transform: translate(-0.15em, 0em);
+  }
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes spin-0 {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-45 {
+  100% {
+    transform: rotate(405deg);
+  }
+}
+
+@keyframes spin-90 {
+  100% {
+    transform: rotate(450deg);
+  }
+}
+
+@keyframes spin-135 {
+  100% {
+    transform: rotate(495deg);
+  }
+}
+
+@keyframes drizzle {
+  0% {
+    background-color: $weather_light;
+    box-shadow: 0.4em 0.4em $weather_light, 0.8em 0em $weather_light,
+      1.2em 0.4em $weather_light, 1.6em 0em $weather_light,
+      2em 0.4em $weather_light, 0.8em 0.8em $weather_light,
+      1.2em 0.4em $weather_light, 1.6em 0.8em $weather_light,
+      0.4em 1.2em $weather_light, 1.2em 1.2em $weather_light,
+      0.8em 1.6em $weather_light;
+  }
+  40% {
+    background-color: $weather_accent;
+    box-shadow: 0.4em 0.4em $weather_accent, 0.8em 0em $weather_accent,
+      1.2em 0.4em $weather_accent, 1.6em 0em $weather_accent,
+      2em 0.4em $weather_accent, 0.8em 0.8em $weather_light,
+      1.2em 0.4em $weather_light, 1.6em 0.8em $weather_light,
+      0.4em 1.2em $weather_light, 1.2em 1.2em $weather_light,
+      0.8em 1.6em $weather_light;
+  }
+  60% {
+    background-color: $weather_light;
+    box-shadow: 0.4em 0.4em $weather_light, 0.8em 0em $weather_light,
+      1.2em 0.4em $weather_light, 1.6em 0em $weather_light,
+      2em 0.4em $weather_light, 0.8em 0.8em $weather_accent,
+      1.2em 0.4em $weather_accent, 1.6em 0.8em $weather_accent,
+      0.4em 1.2em $weather_light, 1.2em 1.2em $weather_light,
+      0.8em 1.6em $weather_light;
+  }
+  80% {
+    background-color: $weather_light;
+    box-shadow: 0.4em 0.4em $weather_light, 0.8em 0em $weather_light,
+      1.2em 0.4em $weather_light, 1.6em 0em $weather_light,
+      2em 0.4em $weather_light, 0.8em 0.8em $weather_light,
+      1.2em 0.4em $weather_light, 1.6em 0.8em $weather_light,
+      0.4em 1.2em $weather_accent, 1.2em 1.2em $weather_accent,
+      0.8em 1.6em $weather_light;
+  }
+  90% {
+    background-color: $weather_light;
+    box-shadow: 0.4em 0.4em $weather_light, 0.8em 0em $weather_light,
+      1.2em 0.4em $weather_light, 1.6em 0em $weather_light,
+      2em 0.4em $weather_light, 0.8em 0.8em $weather_light,
+      1.2em 0.4em $weather_light, 1.6em 0.8em $weather_light,
+      0.4em 1.2em $weather_light, 1.2em 1.2em $weather_light,
+      0.8em 1.6em $weather_accent;
+  }
+  100% {
+    background-color: $weather_light;
+    box-shadow: 0.4em 0.4em $weather_light, 0.8em 0em $weather_light,
+      1.2em 0.4em $weather_light, 1.6em 0em $weather_light,
+      2em 0.4em $weather_light, 0.8em 0.8em $weather_light,
+      1.2em 0.4em $weather_light, 1.6em 0.8em $weather_light,
+      0.4em 1.2em $weather_light, 1.2em 1.2em $weather_light,
+      0.8em 1.6em $weather_light;
+  }
+}
+
+@keyframes rain {
+  0% {
+    background-color: $weather_light;
+    box-shadow: 0.6em 0.6em $weather_light, 1.2em -0.2em $weather_light,
+      1.2em 1.2em $weather_light, 1.8em 0.2em $weather_light;
+  }
+  30% {
+    background-color: $weather_accent;
+    box-shadow: 0.6em 0.6em $weather_light, 1.2em -0.2em $weather_accent,
+      1.2em 1.2em $weather_light, 1.8em 0.2em $weather_light;
+  }
+  50% {
+    background-color: $weather_light;
+    box-shadow: 0.6em 0.6em $weather_accent, 1.2em -0.2em 0 $weather_light,
+      1.2em 1.2em $weather_light, 1.8em 0.2em $weather_accent;
+  }
+  80% {
+    background-color: $weather_light;
+    box-shadow: 0.6em 0.6em $weather_light, 1.2em -0.2em $weather_light,
+      1.2em 1.2em $weather_accent, 1.8em 0.2em $weather_light;
+  }
+  100% {
+    background-color: $weather_light;
+    box-shadow: 0.6em 0.6em $weather_light, 1.2em -0.2em $weather_light,
+      1.2em 1.2em $weather_light, 1.8em 0.2em $weather_light;
+  }
+}
+
+@keyframes lightning {
+  0% {
+    background-color: $weather_accent;
+  }
+  80% {
+    background-color: $weather_light;
+  }
+  85% {
+    background-color: $weather_accent;
+  }
+  90% {
+    background-color: $weather_light;
+  }
+  100% {
+    background-color: $weather_accent;
+  }
+}
+
+@keyframes move {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(0.5) translate(-6em, -3em);
+    opacity: 0;
+  }
+}

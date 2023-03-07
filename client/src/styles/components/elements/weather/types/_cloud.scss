@@ -1,0 +1,83 @@
+.cloud {
+  color: $background;
+  background: $background;
+  position: absolute;
+  width: 3.4875em;
+  height: 3.4875em;
+  border-radius: 50%;
+  box-shadow: 2.0625em 0.9375em 0 -0.9375em, 0 0 0 0.375em $weather_accent,
+    2.0625em 0.9375em 0 -0.5625em $weather_accent;
+
+  &:after {
+    color: $background;
+    background: $background;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 1.8em;
+    display: block;
+    width: 2em;
+    height: 1em;
+    box-shadow: 0 0.4375em 0 -0.0625em $weather_accent;
+  }
+}
+
+&.sun-shower {
+  .cloud {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 3.6875em;
+    height: 3.6875em;
+    margin: -1.84375em;
+    background: $background;
+    border-radius: 50%;
+    box-shadow: -2.1875em 0.6875em 0 -0.6875em, 2.0625em 0.9375em 0 -0.9375em,
+      0 0 0 0.375em $weather_accent,
+      -2.1875em 0.6875em 0 -0.3125em $weather_accent,
+      2.0625em 0.9375em 0 -0.5625em $weather_accent;
+
+    & + .sun {
+      margin: -2em 1em;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -0.5em;
+      display: block;
+      width: 4.5625em;
+      height: 1.545em;
+      background: $background;
+      box-shadow: 0 0.4375em 0 -0.0625em $weather_accent;
+    }
+
+    &:nth-child(2) {
+      z-index: 0;
+      background: $weather_accent;
+      box-shadow: -2.1875em 0.6875em 0 -0.6875em $weather_accent,
+        2.0625em 0.9375em 0 -0.9375em $weather_accent,
+        0 0 0 0.375em $weather_accent,
+        -2.1875em 0.6875em 0 -0.3125em $weather_accent,
+        2.0625em 0.9375em 0 -0.5625em $weather_accent;
+      opacity: 0.3;
+      transform: scale(0.5) translate(6em, -3em);
+      animation: cloud 4s linear infinite;
+
+      &:after {
+        background: $weather_accent;
+      }
+    }
+  }
+}
+
+.small-cloud {
+  background: $background;
+  box-shadow: 2.0625em 0.9375em 0 -0.9375em, 0 0 0 0.375em $weather_accent,
+    2.0625em 0.9375em 0 -0.5625em $weather_accent;
+  opacity: 0.3;
+  transform: scale(0.5) translate(6em, -3em);
+  animation: move 5s infinite linear;
+}

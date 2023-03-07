@@ -9,7 +9,13 @@ form {
     max-width: $search_width;
 
     input {
+      font-weight:500;
       margin: 0;
+    }
+
+    button {
+      font-weight:500;
+      margin-left: $header_user_action_gap;
     }
   }
 
@@ -47,7 +53,7 @@ form {
     height: $input_height;
     width: 100%;
     text-align: left;
-    color: $color;
+    color: $color_on_white;
     padding: $input_pad;
     outline: none;
     margin-bottom: $input_gap;

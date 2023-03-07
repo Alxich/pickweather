@@ -1,0 +1,12 @@
+.content-weather {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 3px solid $color_on_white;
+  border-radius: $reg_radius;
+  padding: $content_pad_around;
+}
+
+@import "./weather-info";
+@import "./weather-list";

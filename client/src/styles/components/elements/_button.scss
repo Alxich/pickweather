@@ -5,7 +5,7 @@
   border: none;
   border-radius: $reg_radius;
   outline: none;
-  color: $color;
+  color: $color_on_white;
   padding: $button_gap;
   transition: all $transition_normal;
 
@@ -30,7 +30,7 @@
   }
 
   &.outline {
-    border: 2px solid $color;
+    border: 2px solid $color_on_white;
   }
 
   &.awesome-icon {

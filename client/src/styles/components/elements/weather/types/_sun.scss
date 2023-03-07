@@ -1,0 +1,114 @@
+&.sun-shower {
+  .sun {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    margin: -1.25em;
+    background: $background;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0.375em $weather_accent;
+    animation: spin 12s infinite linear;
+  }
+
+  .rays {
+    position: absolute;
+    top: -1em;
+    left: 0rem;
+    display: block;
+    width: 0.375em;
+    height: 1.125em;
+    margin-left: -0.1875em;
+    background: $weather_accent;
+    border-radius: 0.25em;
+    box-shadow: 0 5.375em $weather_accent;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0em;
+      left: 0em;
+      display: block;
+      width: 0.375em;
+      height: 1.125em;
+      transform: rotate(60deg);
+      transform-origin: 50% 3.25em;
+      background: $weather_accent;
+      border-radius: 0.25em;
+      box-shadow: 0 5.375em $weather_accent;
+      transform: rotate(120deg);
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0em;
+      left: 0em;
+      display: block;
+      width: 0.375em;
+      height: 1.125em;
+      transform: rotate(60deg);
+      transform-origin: 50% 3.25em;
+      background: $weather_accent;
+      border-radius: 0.25em;
+      box-shadow: 0 5.375em $weather_accent;
+    }
+  }
+}
+
+&:not(.sun-shower) {
+  .sun {
+    color: $background;
+    background: $background;
+    position: absolute;
+    width: 2.5em;
+    margin: 0.8em;
+    height: 2.5em;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0.375em $weather_accent;
+  }
+
+  .rays {
+    position: relative;
+    transform: translate(1.1em, -0.8em);
+  }
+
+  .ray {
+    color: $background;
+    background: $background;
+    position: absolute;
+    margin: 0.8em;
+    width: 0.4em;
+    height: 4.2em;
+    box-shadow: 0 0.5em 0 0 $weather_accent, 0 -0.5em 0 0 $weather_accent;
+
+    &::after {
+      content: "";
+      background: $background;
+      position: relative;
+      display: block;    
+      height: 64px;
+      width: 20px;
+    }
+
+    &:nth-child(1) {
+      animation: spin-0 10s infinite linear;
+    }
+
+    &:nth-child(2) {
+      transform: rotate(45deg);
+      animation: spin-45 10s infinite linear;
+    }
+
+    &:nth-child(3) {
+      transform: rotate(90deg);
+      animation: spin-90 10s infinite linear;
+    }
+
+    &:nth-child(4) {
+      transform: rotate(135deg);
+      animation: spin-135 10s infinite linear;
+    }
+  }
+}

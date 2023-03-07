@@ -1,4 +1,4 @@
-.masthead {
+#masthead {
   position: fixed;
   background: $overhigh_bg;
   display: flex;
@@ -16,9 +16,13 @@
     cursor: pointer;
     user-select: none;
 
-    p {
+    h1 {
       @include logo;
     }
+  }
+  
+  .button {
+    font-weight:500
   }
 
   .interagtions {

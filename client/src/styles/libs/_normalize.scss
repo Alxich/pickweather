@@ -32,6 +32,8 @@ $normalize_headings: true !default;
 
 $default_font_size: 15px !default;
 
+$default_font_weight: 400 !default;
+
 // Set the default width of content on site
 
 $main-wrap-width-bool: true !default;
@@ -108,7 +110,7 @@ html {
   }
   background: $background;
   font-size: $default_font_size;
-  color: $color;
+  color: $color_on_white;
   -webkit-text-size-adjust: 100%; // 2
   -ms-text-size-adjust: 100%; // 2
   scroll-behavior: smooth;
@@ -122,7 +124,7 @@ input,
 select,
 textarea {
   font-family: $normalized_font_family;
-  font-weight: 500;
+  font-weight: $default_font_weight;
 }
 
 // Addresses margins handled incorrectly in IE6/7
@@ -130,7 +132,7 @@ textarea {
 body {
   margin: 0;
   font-size: $default_font_size;
-  font-weight: 500;
+  font-weight: $default_font_weight;
 }
 
 // Allows to select width for main tag
@@ -139,6 +141,7 @@ body {
   main {
     max-width: $main-wrap-width-val;
     padding-top: $header_height + $content_top_pad;
+    padding-bottom: $content_btm_pad;
     margin: 0 auto;
   }
 }
@@ -176,7 +179,7 @@ a {
 
   // 5
 
-  color: $color;
+  color: $color_on_white;
 }
 
 // =============================================================================
