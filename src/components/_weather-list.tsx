@@ -1,7 +1,7 @@
-import React from "react";
+import { ReactElement } from "react";
 import { WeatherIcon } from "./elements";
 
-const weatherList = () => {
+const WeatherList = (): ReactElement => {
   return (
     <div id="weather-list" className="content-weather">
       <div className="item">
@@ -44,4 +44,4 @@ const weatherList = () => {
   );
 };
 
-export default weatherList;
+export default WeatherList;

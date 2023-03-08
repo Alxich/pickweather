@@ -1,7 +1,11 @@
-import React from "react";
+import { ReactElement } from "react";
 import classnames from "classnames";
 
-// Thanks ysajid and joshbader for animated icons
+/*
+ * This is element that show weather icon (like rain, sun, cloud)
+ * allows you to use it in every place in your site.
+ * Just import and choose type of weather from types list
+ */
 
 interface types {
   sunShower?: boolean;
@@ -14,7 +18,7 @@ interface types {
   cloud?: boolean;
 }
 
-const weatherIcon = ({
+const WeatherIcon = ({
   sunShower,
   sun,
   rain,
@@ -23,11 +27,10 @@ const weatherIcon = ({
   extreme,
   snow,
   cloud,
-}: types) => {
+}: types): ReactElement => {
   return (
     <div
-      id="icon-weather"
-      className={classnames({
+      className={classnames("icon-weather", {
         "sun-shower": sunShower,
       })}
     >
@@ -102,4 +105,4 @@ const weatherIcon = ({
   );
 };
 
-export default weatherIcon;
+export default WeatherIcon;

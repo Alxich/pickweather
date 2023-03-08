@@ -2,6 +2,8 @@ import { ReactElement } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import classNames from "classnames";
 
+// Use that button to improve easy coding.
+
 interface buttonProps {
   onClick?: () => void;
   className?: string;

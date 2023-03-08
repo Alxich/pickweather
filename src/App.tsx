@@ -1,8 +1,21 @@
-import React from "react";
-import { Button, News, WeatherInfo, WeatherList } from "./components";
+import { ReactElement } from "react";
+import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
 import { faMagnifyingGlassLocation } from "@fortawesome/free-solid-svg-icons";
 
-function App() {
+import {
+  Button,
+  Categories,
+  News,
+  WeatherInfo,
+  WeatherList,
+} from "./components";
+
+function App(): ReactElement {
+  const client = new ApolloClient({
+    cache: new InMemoryCache(),
+    uri: "http://localhost:3001/graphql",
+  });
+
   return (
     <div className="App">
       <header id="masthead">
@@ -32,18 +45,7 @@ function App() {
           <WeatherList />
         </div>
         <div className="container flex-row flex-stretch flex-space border content-use margin-top">
-          <div id="categories" className="content-weather">
-            <div className="title">
-              <h3>Categories</h3>
-            </div>
-            <ul>
-              <li>All</li>
-              <li>National</li>
-              <li>Business</li>
-              <li>Sports</li>
-              <li>World</li>
-            </ul>
-          </div>
+          <Categories />
           <News />
         </div>
       </main>

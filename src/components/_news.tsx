@@ -1,6 +1,6 @@
-import React from "react";
+import { ReactElement } from "react";
 
-const News = () => {
+const News = (): ReactElement => {
   return (
     <div id="news" className="content-weather">
       <div className="title">

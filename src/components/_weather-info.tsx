@@ -1,4 +1,4 @@
-import React from "react";
+import { ReactElement } from "react";
 import { WeatherIcon } from "./elements";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -8,7 +8,7 @@ import {
   faSun,
 } from "@fortawesome/free-solid-svg-icons";
 
-const weatherInfo = () => {
+const WeatherInfo = (): ReactElement => {
   return (
     <div id="weather-info" className="content-weather">
       <div className="main">
@@ -90,4 +90,4 @@ const weatherInfo = () => {
   );
 };
 
-export default weatherInfo;
+export default WeatherInfo;
