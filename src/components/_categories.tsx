@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import classnames from "classnames";
 
 const Categories = ({
@@ -10,7 +10,7 @@ const Categories = ({
   category: string | null;
   setCategorySelected: any;
 }): JSX.Element => {
-  const Element = ({ item, i }: { item: any; i: any }) => {
+  const Element = ({ item, i }: { item: string; i: Number }) => {
     return (
       <li
         className={classnames({
@@ -33,7 +33,7 @@ const Categories = ({
       </div>
       <ul>
         {categories &&
-          categories.map((item: any, i: any) => (
+          categories.map((item: string, i: Number) => (
             <Element item={item} i={i} key={`${item}__${category}__${i}`} />
           ))}
       </ul>
