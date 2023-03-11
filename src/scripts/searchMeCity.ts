@@ -1,4 +1,8 @@
-// Thanks techfoobar
+/**
+ * This script allow you to find string in Objects Array
+ * and gives the results wich you can operate.
+ * Thanks techfoobar. :)
+ */
 
 export function searchMeCity(toSearch: any, objects: any) {
   function trimString(s: string) {
