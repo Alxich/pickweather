@@ -8,93 +8,130 @@ import classnames from "classnames";
  */
 
 interface types {
-  sunShower?: boolean;
-  sun?: boolean;
-  rain?: boolean;
-  thunder?: boolean;
-  drizzle?: boolean;
-  extreme?: boolean;
-  snow?: boolean;
-  cloud?: boolean;
+  weather?: string | null;
 }
 
-const WeatherIcon = ({
-  sunShower,
-  sun,
-  rain,
-  thunder,
-  drizzle,
-  extreme,
-  snow,
-  cloud,
-}: types): JSX.Element => {
+const WeatherIcon = ({ weather }: types): JSX.Element => {
+  const returnMeIcon = ({ weather }: types) => {
+    switch (weather) {
+      case "oshower":
+        return (
+          <>
+            <div className="cloud"></div>
+            <div className="sun"></div>
+            <div className="rain"></div>
+          </>
+        );
+      case "pcloudy":
+        return (
+          <>
+            <div className="cloud"></div>
+            <div className="sun"></div>
+          </>
+        );
+      case "clear":
+        return (
+          <>
+            <div className="rays">
+              <div className="ray"></div>
+              <div className="ray"></div>
+              <div className="ray"></div>
+              <div className="ray"></div>
+            </div>
+            <div className="sun"></div>
+          </>
+        );
+      case "cloud":
+        return (
+          <>
+            <div className="cloud small-cloud"></div>
+            <div className="cloud"></div>
+          </>
+        );
+      case "rain":
+        return (
+          <>
+            <div className="cloud"></div>
+            <div className="rain"></div>
+          </>
+        );
+      case "lightrain":
+        return (
+          <>
+            <div className="cloud"></div>
+            <div className="rain"></div>
+          </>
+        );
+      case "ts":
+        return (
+          <>
+            <div className="cloud"></div>
+            <div className="thunder">
+              <div className="bolt"></div>
+              <div className="bolt"></div>
+            </div>
+          </>
+        );
+      case "tsrain":
+        return (
+          <>
+            <div className="cloud"></div>
+            <div className="thunder">
+              <div className="bolt"></div>
+              <div className="bolt"></div>
+            </div>
+          </>
+        );
+      case "snow":
+        return (
+          <>
+            <div className="cloud"></div>
+            <div className="snow">
+              <div className="flake"></div>
+              <div className="flake"></div>
+              <div className="flake"></div>
+              <div className="flake"></div>
+            </div>
+          </>
+        );
+      case "drizzle":
+        return (
+          <>
+            <div className="cloud"></div>
+            <div className="drizzle"></div>
+          </>
+        );
+      case "extreme":
+        return (
+          <div className="extreme text-center">
+            <div className="harsh-wind"></div>
+            <div className="harsh-wind"></div>
+            <div className="harsh-wind"></div>
+            <div className="harsh-wind"></div>
+            <div className="harsh-wind"></div>
+            <div className="harsh-wind"></div>
+            <div className="harsh-wind"></div>
+          </div>
+        );
+      default:
+        return (
+          <>
+            <div className="cloud small-cloud"></div>
+            <div className="cloud"></div>
+          </>
+        );
+    }
+  };
+
   return (
     <div
       className={classnames("icon-weather", {
-        "sun-shower": sunShower,
+        "sun-shower": weather === "pcloudy" || weather === "oshower",
+        cloudy: weather === "cloudy",
       })}
     >
-      {sunShower ? (
-        <>
-          <div className="cloud"></div>
-          <div className="sun">
-            <div className="rays"></div>
-          </div>
-          <div className="rain"></div>
-        </>
-      ) : cloud ? (
-        <>
-          <div className="cloud small-cloud"></div>
-          <div className="cloud"></div>
-        </>
-      ) : rain ? (
-        <>
-          <div className="cloud"></div>
-          <div className="rain"></div>
-        </>
-      ) : thunder ? (
-        <>
-          <div className="cloud"></div>
-          <div className="thunder">
-            <div className="bolt"></div>
-            <div className="bolt"></div>
-          </div>
-        </>
-      ) : sun ? (
-        <>
-          <div className="rays">
-            <div className="ray"></div>
-            <div className="ray"></div>
-            <div className="ray"></div>
-            <div className="ray"></div>
-          </div>
-          <div className="sun"></div>
-        </>
-      ) : drizzle ? (
-        <>
-          <div className="cloud"></div>
-          <div className="drizzle"></div>
-        </>
-      ) : snow ? (
-        <>
-          <div className="cloud"></div>
-          <div className="snow">
-            <div className="flake"></div>
-            <div className="flake"></div>
-            <div className="flake"></div>
-            <div className="flake"></div>
-          </div>
-        </>
-      ) : extreme ? (
-        <div className="extreme text-center">
-          <div className="harsh-wind"></div>
-          <div className="harsh-wind"></div>
-          <div className="harsh-wind"></div>
-          <div className="harsh-wind"></div>
-          <div className="harsh-wind"></div>
-          <div className="harsh-wind"></div>
-          <div className="harsh-wind"></div>
-        </div>
+      {weather ? (
+        returnMeIcon({ weather })
       ) : (
         <>
           <div className="cloud small-cloud"></div>

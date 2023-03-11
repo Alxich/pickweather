@@ -5,7 +5,7 @@ import classNames from "classnames";
 // Use that button to improve easy coding.
 
 interface buttonProps {
-  onClick?: () => void;
+  onClick?: any;
   className?: string;
   outline?: boolean;
   filled?: boolean;

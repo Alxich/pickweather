@@ -7,7 +7,9 @@ import {
 const initialState: weatherState = {
   weatherAstro: {},
   weatherCivil: {},
-  loading: false,
+  latitude: null,
+  longitude: null,
+  loading: true,
   error: null,
 };
 
@@ -20,6 +22,8 @@ export const weatherReducer = (
       return {
         weatherAstro: {},
         weatherCivil: {},
+        latitude: state.latitude,
+        longitude: state.longitude,
         loading: true,
         error: null,
       };
@@ -28,16 +32,40 @@ export const weatherReducer = (
       return {
         weatherAstro: action.payload.weatherAstro,
         weatherCivil: action.payload.weatherCivil,
+        latitude: state.latitude,
+        longitude: state.longitude,
+        loading: false,
+        error: null,
+      };
+
+    case WeatherActionTypes.FETCH_WEATHER_CITY_SUCCESS:
+      return {
+        weatherAstro: action.payload.weatherAstro,
+        weatherCivil: action.payload.weatherCivil,
+        latitude: state.latitude,
+        longitude: state.longitude,
         loading: false,
         error: null,
       };
 
     case WeatherActionTypes.FETCH_WEATHER_ERROR:
       return {
-        weatherAstro: {},
-        weatherCivil: {},
+        weatherAstro: state.weatherAstro,
+        weatherCivil: state.weatherCivil,
+        latitude: state.latitude,
+        longitude: state.longitude,
         loading: false,
         error: action.payload,
+      };
+
+    case WeatherActionTypes.SET_WEATHER_CITY:
+      return {
+        weatherAstro: state.weatherAstro,
+        weatherCivil: state.weatherCivil,
+        latitude: action.payload.latitude,
+        longitude: action.payload.longitude,
+        loading: true,
+        error: null,
       };
 
     default:

@@ -6,8 +6,6 @@ import { newsState } from "../types/news";
 const News = ({ news, error, loading }: newsState): JSX.Element => {
   const newsArray = news && news?.length > 3 ? news?.slice(0, 3) : news;
 
-  console.log(newsArray);
-
   return (
     <div id="news" className="content-weather">
       <div className="title">

@@ -11,6 +11,15 @@
   left: -5px;
   top: -5px;
 
+  &.sun-shower {
+    font-size: 0.94em;
+    left: 0px;
+  }
+
+  &.cloudy {
+    top: 5px;
+  }
+
   .thunder,
   .snow,
   .haze,

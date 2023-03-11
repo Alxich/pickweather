@@ -1,0 +1,53 @@
+.results {
+  position: absolute;
+  background: $background;
+  @include content_border;
+  top: 55px;
+  left: 0;
+  max-height: 320px;
+  width: 100%;
+  padding: 0 5px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox 64 */
+
+  &::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none; /* IE 11 */
+  }
+
+  .item {
+    background: transparent;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 12px;
+    cursor: pointer;
+    transition: all $transition_normal;
+
+    &:hover {
+      background: $outbox_light;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 0.5px solid $placeholder;
+    }
+
+    .fafont-icon {
+      @include content_border;
+      height: 40px;
+      width: 40px;
+      padding: 2px;
+    }
+
+    .title {
+      margin-left: 5px;
+
+      * {
+        font-weight: 500;
+        margin: 0;
+      }
+    }
+  }
+}

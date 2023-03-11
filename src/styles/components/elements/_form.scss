@@ -8,6 +8,15 @@ form {
   &.search {
     max-width: $search_width;
 
+    .input-search {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      align-items: stretch;
+      width: 100%;
+    }
+
     input {
       font-weight:500;
       margin: 0;
