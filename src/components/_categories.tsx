@@ -1,6 +1,6 @@
-import { ReactElement } from "react";
+import React from "react";
 
-const Categories = (): ReactElement => {
+const Categories = (): JSX.Element => {
   return (
     <div id="categories" className="content-weather">
       <div className="title">

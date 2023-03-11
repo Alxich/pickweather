@@ -1,4 +1,4 @@
-import { ReactElement } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import classNames from "classnames";
 
@@ -30,7 +30,7 @@ const Button = ({
   iconIncluded,
   iconName,
   children,
-}: buttonProps): ReactElement => {
+}: buttonProps): JSX.Element => {
   return (
     <button
       onClick={onClick}

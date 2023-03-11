@@ -1,7 +1,7 @@
-import { ReactElement } from "react";
+import React from "react";
 import { WeatherIcon } from "./elements";
 
-const WeatherList = (): ReactElement => {
+const WeatherList = (): JSX.Element => {
   return (
     <div id="weather-list" className="content-weather">
       <div className="item">

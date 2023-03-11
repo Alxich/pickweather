@@ -1,4 +1,4 @@
-import { ReactElement } from "react";
+import React from "react";
 import classnames from "classnames";
 
 /*
@@ -27,7 +27,7 @@ const WeatherIcon = ({
   extreme,
   snow,
   cloud,
-}: types): ReactElement => {
+}: types): JSX.Element => {
   return (
     <div
       className={classnames("icon-weather", {
