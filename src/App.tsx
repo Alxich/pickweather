@@ -4,6 +4,13 @@ import { faMagnifyingGlassLocation } from "@fortawesome/free-solid-svg-icons";
 // Redux Hooks
 import { useTypedSelector } from "./hooks/useTypedSelector";
 
+// import json default
+import categories from "./defaults/categories.json";
+
+// Import cities
+import cities from 'cities.json';
+import { searchMeCity } from "./scripts/searchMeCity";
+
 import {
   Button,
   Categories,
@@ -30,22 +37,6 @@ function App(): JSX.Element {
 
   const [categorySelected, setCategorySelected] = useState("");
 
-  const categories = [
-    "All",
-    "national",
-    "business",
-    "sports",
-    "world",
-    "politics",
-    "technology",
-    "startup",
-    "entertainment",
-    "miscellaneous",
-    "hatke",
-    "science",
-    "automobile",
-  ];
-
   useEffect(() => {
     fetchWeather();
     fetchNews({ category: null });
@@ -58,6 +49,8 @@ function App(): JSX.Element {
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [categorySelected]);
+
+  console.log(searchMeCity("New York", cities));
 
   if (loading) {
     return <Loading />;
@@ -94,7 +87,7 @@ function App(): JSX.Element {
           </div>
           <div className="container flex-row flex-stretch flex-space border content-use margin-top">
             <Categories
-              categories={categories}
+              categories={categories.categories}
               category={category}
               setCategorySelected={setCategorySelected}
             />
@@ -128,12 +121,32 @@ function App(): JSX.Element {
                 <div className="title">
                   <h3>Interesting links</h3>
                 </div>
-                <a href="https://github.com/alxich">Github</a>
-                <a href="http://www.7timer.info">7timer</a>
-                <a href="https://github.com/cyberboysumanjay/Inshorts-News-API">
+                <a
+                  href="https://github.com/alxich"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Github
+                </a>
+                <a
+                  href="http://www.7timer.info"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  7timer
+                </a>
+                <a
+                  href="https://github.com/cyberboysumanjay/Inshorts-News-API"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Inshorts News API
                 </a>
-                <a href="https://github.com/lutangar/cities.json">
+                <a
+                  href="https://github.com/lutangar/cities.json"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   cities.json
                 </a>
               </div>
@@ -141,8 +154,19 @@ function App(): JSX.Element {
           </div>
           <div className="btm container full-width">
             <p>
-              Built with <a href="https://github.com/alxich">Alxich</a> and the{" "}
-              <a href="http://www.7timer.info">7timer</a> API
+              Built with{" "}
+              <a
+                href="https://github.com/alxich"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Alxich
+              </a>{" "}
+              and the{" "}
+              <a href="http://www.7timer.info" target="_blank" rel="noreferrer">
+                7timer
+              </a>{" "}
+              API
             </p>
           </div>
         </footer>
