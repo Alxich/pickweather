@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { faMagnifyingGlassLocation } from "@fortawesome/free-solid-svg-icons";
 
 // Redux Hooks
@@ -23,14 +23,41 @@ function App(): JSX.Element {
     news,
     error: newsError,
     loading: newsLoading,
+    category,
   } = useTypedSelector((state) => state.news);
 
   const { fetchWeather, fetchNews } = useActions();
 
+  const [categorySelected, setCategorySelected] = useState("");
+
+  const categories = [
+    "All",
+    "national",
+    "business",
+    "sports",
+    "world",
+    "politics",
+    "technology",
+    "startup",
+    "entertainment",
+    "miscellaneous",
+    "hatke",
+    "science",
+    "automobile",
+  ];
+
   useEffect(() => {
     fetchWeather();
-    fetchNews();
+    fetchNews({ category: null });
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  useEffect(() => {
+    fetchNews({ category: categorySelected ? categorySelected : null });
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [categorySelected]);
 
   if (loading) {
     return <Loading />;
@@ -66,8 +93,17 @@ function App(): JSX.Element {
             <WeatherList />
           </div>
           <div className="container flex-row flex-stretch flex-space border content-use margin-top">
-            <Categories />
-            <News news={news} loading={newsLoading} error={newsError} />
+            <Categories
+              categories={categories}
+              category={category}
+              setCategorySelected={setCategorySelected}
+            />
+            <News
+              news={news}
+              loading={newsLoading}
+              error={newsError}
+              category={category}
+            />
           </div>
         </main>
         <footer id="colophone">

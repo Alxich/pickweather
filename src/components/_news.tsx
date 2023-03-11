@@ -13,14 +13,15 @@ const News = ({ news, error, loading }: newsState): JSX.Element => {
       <div className="title">
         <h3>Todays news</h3>
       </div>
-      {loading ? (
+      {loading && (
         <div className="item">
           <div className="text-block">
             <p>News are loading. Wait for a moment</p>
             <p>They will be soon here :{")"}</p>
           </div>
         </div>
-      ) : error ? (
+      )}
+      {error ? (
         <div className="item">
           <div className="text-block">
             <p>{error}</p>
